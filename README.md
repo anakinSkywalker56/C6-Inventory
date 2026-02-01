@@ -20,3 +20,84 @@ Welcome to the QR based inventory system! We, the devs, are excited to get this 
 - Database Creation
 - Database Customization
 - Mobile for scanning, Desktop website for monitoring
+
+## GIT stuff
+
+After you finish creating something, you would usually do something like a commit to save your progress, these are the following steps
+
+Firstly you will stage your commits, what this means is, you will add the files you WANT to commit, this is called "staging"
+
+How to stage:
+
+```bash
+git add <filename>
+// to add your specific file
+```
+
+then you commit it
+
+```bash
+git commit -m "I added a login feature"
+// you have to be very specific on what you added, or removed, or modified, to be clear for the other members in the team
+```
+
+Why isn't `git add .` recommended?
+
+```bash
+git add .
+aka git add (all)
+```
+
+will stage all files you modified for commit, this will commit all your files by bulk, and if you do, adding `-m "Message"` will typically result in very vague descriptions, making the team constantly ask questions on "What you modified" in these commits, even the author can forget about what they add in these commits because of the sheer magnitude of the project.
+
+## Errors
+
+## Error regarding `npm run dev`
+
+This happens when you try to run this command for the first time in bash
+
+```bash
+npm run dev
+```
+
+it usually means that there's something wrong with the setup
+
+then this error stack shows:
+
+```bash
+npm error Missing script: "dev"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\Anakin\AppData\Local\npm-cache\_logs\2026-02-01T03_26_31_265Z-debug-0.log
+```
+
+### Solution
+
+Just `cd` to your project 💀, stupid right? Anyways, sometimes we name a folder the same name as our project, so its often gonna look like `projects/Inventory/Inventory` in directory
+
+```bash
+projectFolder/Project/ActualReactApp
+project/Inventory/Inventory
+```
+
+so when an error occurs, it's usually because you're in
+
+```bash
+project/Inventory
+```
+
+and not accessing your React-app
+
+## Error regarding ```Module not found: @tailwindcss/vite
+
+This happens when you forget some initial configuration on setup, for instance, forgetting to install @tailwindcss module
+
+### Solution
+
+```bash
+run
+npm install -D tailwindcss @tailwindcss/vite
+```
+
+That's it, you can now `npm run dev` just fine now✨
