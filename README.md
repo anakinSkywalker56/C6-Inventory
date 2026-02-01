@@ -23,6 +23,8 @@ Welcome to the QR based inventory system! We, the devs, are excited to get this 
 
 ## GIT stuff
 
+### `git commit`
+
 After you finish creating something, you would usually do something like a commit to save your progress, these are the following steps
 
 Firstly you will stage your commits, what this means is, you will add the files you WANT to commit, this is called "staging"
@@ -49,6 +51,20 @@ aka git add (all)
 ```
 
 will stage all files you modified for commit, this will commit all your files by bulk, and if you do, adding `-m "Message"` will typically result in very vague descriptions, making the team constantly ask questions on "What you modified" in these commits, even the author can forget about what they add in these commits because of the sheer magnitude of the project.
+
+### `git checkout`
+
+So ur a developer in this team, and Anakin (me, hehe) asked you to only commit changes in "branch: testing". This is how we do it:
+
+In your bash (console), execute:
+
+```bash
+git checkout testing
+```
+
+this transfers you to the testing branch, and not to branch main.
+
+Why do this? So you don't accidentally **_~~fuck~~ up_** our hard work of course! Great j\*b team~ ✨
 
 ## Errors
 
