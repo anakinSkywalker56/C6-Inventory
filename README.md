@@ -23,6 +23,26 @@ Welcome to the QR based inventory system! We, the devs, are excited to get this 
 
 ## GIT stuff
 
+### Do these before you code **ANYTHING**
+
+1. Make sure your local repo \(your cloned one in your device\) is up to date
+2. Update your `testing` branch
+
+### After checking that, you can now attempt adding code, and follow these steps
+
+1. Test your code
+2. Commit Changes
+3. Change to branch testing
+4. Push changes to origin testing
+5. Open GitHub and open the repo
+6. Find Compare & pull request in testing branch
+7. Click it, select:
+   - base branch = main
+   - compare branch = testing
+8. Wait for review
+9. If approved: Click Merge pull request
+10. Optional: Delete branch if no longer needed
+
 ### `git commit`
 
 After you finish creating something, you would usually do something like a commit to save your progress, these are the following steps
