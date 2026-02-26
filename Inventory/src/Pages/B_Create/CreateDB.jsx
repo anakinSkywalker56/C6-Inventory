@@ -1,6 +1,12 @@
 import Header from "../../Components/General/Header";
+import Popup from "../../Components/General/Popup";
+import Cancel from "../../Components/General/Cancel";
+import Add from "../../Components/General/Add";
+import Field from "../../Components/Creation/Field";
+import { useNavigate } from "react-router";
 
 const CreateDB = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex">
       <div className="flex h-full w-screen justify-center items-center">
@@ -15,7 +21,7 @@ const CreateDB = () => {
                 <div className="h-2 w-430 bg-blue-500 rounded-2xl mt-3"></div>
               </div>
               <div className="w-460 justify-center flex ">
-                <div className="mt-10 h-150 w-430  flex">
+                <div className="mt-10 h-130 w-430  flex">
                   <div className="h-150 w-150 ">
                     <form action="">
                       <div className="">
@@ -29,12 +35,12 @@ const CreateDB = () => {
                           <div className="w-150 flex justify-center mt-5">
                             <input
                               type="text"
-                              className="h-15 w-150 border-5 p-5 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl"
+                              className="h-15 w-150 border-5 p-5 text-blue-950 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl"
                               placeholder="Database Name"
                             />
                           </div>
                         </div>
-                        <div className="mt-5">
+                        <div className="mt-4">
                           <label
                             htmlFor=""
                             className="text-3xl text-blue-950 font-bold"
@@ -43,41 +49,52 @@ const CreateDB = () => {
                           </label>
                           <div className="w-150 flex justify-center mt-5">
                             <textarea
-                              className="h-50 w-150 border-5 p-5 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl"
-                              placeholder="Database Name"
+                              className="h-50 w-150 border-5 p-5 text-blue-950 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl resize-none"
+                              placeholder="Description"
                               rows={4}
                             />
                           </div>
                         </div>
-                        <div className="mt-10">
+                        <div className="mt-4">
                           <label
                             htmlFor=""
                             className="text-3xl text-blue-950 font-bold"
                           >
-                            Database Name
+                            Password
                           </label>
                           <div className="w-150 flex justify-center mt-5">
                             <input
-                              type="text"
-                              className="h-15 w-150 border-5 p-5 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl"
-                              placeholder="Database Name"
+                              type="password"
+                              className="h-15 w-150 border-5 p-5 text-blue-950 border-gray-400 focus:border-blue-500 focus:outline-none rounded-xl"
+                              placeholder="Password"
                             />
                           </div>
                         </div>
                       </div>
                     </form>
                   </div>
-                  <div className="ml-10 h-150 w-270 bg-green-500">
-                    <div>
+                  <div className="ml-10 h-150 w-270 ">
+                    <div className="flex">
                       <div className="text-3xl font-bold text-blue-950">
                         Fields
                       </div>
-                      <button className="bg-blue-500 h-10 w-25 rounded-xl text-white font-bold">
-                        Add +
-                      </button>
+                      <Add />
+                    </div>
+                    <div className="mt-5 h-115 w-270 border-2 border-gray-300 bg-gray-300 rounded-2xl p-4">
+                      <div className="w-relative h-full overflow-y-auto flex gap-5 flex-col ">
+                        <Field />
+                        <Field />
+                        <Field />
+                        <Field />
+                        <Field />
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="mt-5 w-460 flex justify-center">
+                <Cancel />
+                <Popup />
               </div>
             </div>
           </div>
