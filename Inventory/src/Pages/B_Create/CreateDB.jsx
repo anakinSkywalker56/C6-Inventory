@@ -80,8 +80,8 @@ const CreateDB = () => {
                       </div>
                       <Add />
                     </div>
-                    <div className="mt-5 h-115 w-270 border-2 border-gray-300 bg-gray-300 rounded-2xl p-4">
-                      <div className="w-relative h-full overflow-y-auto flex gap-5 flex-col ">
+                    <div className="mt-5 h-115 w-270 border-2 border-gray-300 bg-gray-300 rounded-2xl p-4 ">
+                      <div className="w-relative h-full overflow-y-auto flex gap-5 flex-col scrollbar-hide">
                         <Field />
                         <Field />
                         <Field />
